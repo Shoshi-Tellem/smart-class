@@ -1,0 +1,6 @@
+@smart_class.Api_HostAddress = http://localhost:5129
+
+GET {{smart_class.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
