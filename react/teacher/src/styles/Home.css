@@ -1,0 +1,46 @@
+/* Home.css */
+.home-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.home-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+}
+
+.home-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.home-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.home-nav a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.home-features {
+    margin: 20px 0;
+}
+
+.feature {
+    background-color: #e7f3fe;
+    border: 1px solid #b3d7ff;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.home-footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #777;
+}
