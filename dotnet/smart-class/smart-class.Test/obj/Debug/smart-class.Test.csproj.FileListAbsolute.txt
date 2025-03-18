@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\smart-class.Test.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\smart-class.Test.pdb
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\obj\Debug\smart-class.Test.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\obj\Debug\smart-class.Test.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\obj\Debug\smart-cl.E28347D8.Up2Date
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\obj\Debug\smart-class.Test.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Test\obj\Debug\smart-class.Test.pdb

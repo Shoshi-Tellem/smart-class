@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\bin\Debug\net8.0\smart-class.Service.deps.json
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\bin\Debug\net8.0\smart-class.Service.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\bin\Debug\net8.0\smart-class.Service.pdb
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\bin\Debug\net8.0\smart-class.Core.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\bin\Debug\net8.0\smart-class.Core.pdb
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\smart-class.Service.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\smart-class.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\smart-class.Service.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\smart-class.Service.AssemblyInfo.cs
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\smart-class.Service.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\smart-class.Service.sourcelink.json
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\smart-cl.5595B8FF.Up2Date
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\smart-class.Service.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\refint\smart-class.Service.dll
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\smart-class.Service.pdb
+C:\Users\User\Desktop\ש.ב\dot .NET core\smart class - מורה בענן\dotnet\smart-class\smart-class.Service\obj\Debug\net8.0\ref\smart-class.Service.dll
