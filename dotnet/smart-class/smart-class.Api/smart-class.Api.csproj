@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>smart_class.Api</RootNamespace>
+    <UserSecretsId>ef83ffdf-6bd9-47c3-a493-48b79d8f2aa0</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,10 +16,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Middlewares\" />
   </ItemGroup>
 
   <ItemGroup>
