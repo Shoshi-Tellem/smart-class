@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using smart_class.Api.Entities;
 using smart_class.Core.Classes;
@@ -14,6 +15,7 @@ namespace smart_class.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class AdminController(IAdminService adminService, IMapper mapper) : ControllerBase
     {
         private readonly IAdminService _adminService = adminService;

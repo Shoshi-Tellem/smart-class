@@ -1,8 +1,9 @@
-﻿namespace smart_class.Api.Entities
+﻿using smart_class.Core.Entities;
+
+namespace smart_class.Api.Entities
 {
     public class LessonPostPut
     {
-        public int CourseId { get; set; }
-        public DateTime Date { get; set; }
+        public bool Status { get; set; }
     }
 }

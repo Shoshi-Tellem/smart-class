@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace smart_class.Core.Entities
 {
+    public enum EStatus { Draft, Published }
     public class Lesson
     {
         public int Id { get; set; }
@@ -14,7 +15,7 @@ namespace smart_class.Core.Entities
         public int CourseId { get; set; }
         public Course Course { get; set; }
         IEnumerable<File> Files { get; set; }
-        public DateTime Date { get; set; }
+        public bool Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }

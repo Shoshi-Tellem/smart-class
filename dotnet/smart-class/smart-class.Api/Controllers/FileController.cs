@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using smart_class.Api.Entities;
 using smart_class.Core.DTOs;
@@ -37,6 +38,7 @@ namespace smart_class.Api.Controllers
             return Ok(_mapper.Map<FileDto>(file));
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpPost]
         public async Task<ActionResult<File>> Post([FromBody] FilePostPut filePost)
         {
@@ -46,6 +48,7 @@ namespace smart_class.Api.Controllers
             return CreatedAtAction(nameof(Get), new { id = addedFile.Id }, addedFile);
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpPut("{id}")]
         public async Task<ActionResult<File>> Put(int id, [FromBody] FilePostPut filePut)
         {
@@ -57,6 +60,7 @@ namespace smart_class.Api.Controllers
             return Ok(updatedFile);
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<File>> Delete(int id)
         {
