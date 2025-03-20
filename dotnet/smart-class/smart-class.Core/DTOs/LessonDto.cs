@@ -1,4 +1,5 @@
-﻿using File = smart_class.Core.Entities.File;
+﻿using smart_class.Core.Entities;
+using File = smart_class.Core.Entities.File;
 
 namespace smart_class.Core.DTOs
 {
@@ -7,7 +8,7 @@ namespace smart_class.Core.DTOs
         public int Id { get; set; }
         public int CourseId { get; set; }
         IEnumerable<File> Files { get; set; }
-        public DateTime Date { get; set; }
+        public bool Status { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }

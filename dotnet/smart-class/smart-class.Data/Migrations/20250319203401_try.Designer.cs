@@ -12,8 +12,8 @@ using smart_class.Data;
 namespace smart_class.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250318120632_addInstitutionInUser")]
-    partial class addInstitutionInUser
+    [Migration("20250319203401_try")]
+    partial class @try
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,6 +43,12 @@ namespace smart_class.Data.Migrations
                     b.Property<int>("InstitutionId")
                         .HasColumnType("int");
 
+                    b.Property<int>("InstitutionId1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InstitutionId2")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -55,6 +61,10 @@ namespace smart_class.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("InstitutionId");
+
+                    b.HasIndex("InstitutionId1");
 
                     b.ToTable("Admin");
                 });
@@ -213,7 +223,7 @@ namespace smart_class.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("GroupId")
+                    b.Property<int>("GroupId")
                         .HasColumnType("int");
 
                     b.Property<int>("InstitutionId")
@@ -233,6 +243,8 @@ namespace smart_class.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("GroupId");
+
+                    b.HasIndex("InstitutionId");
 
                     b.ToTable("Student");
                 });
@@ -255,6 +267,12 @@ namespace smart_class.Data.Migrations
                     b.Property<int>("InstitutionId")
                         .HasColumnType("int");
 
+                    b.Property<int>("InstitutionId1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InstitutionId2")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -268,7 +286,28 @@ namespace smart_class.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("InstitutionId");
+
+                    b.HasIndex("InstitutionId1");
+
                     b.ToTable("Teacher");
+                });
+
+            modelBuilder.Entity("smart_class.Core.Entities.Admin", b =>
+                {
+                    b.HasOne("smart_class.Core.Entities.Institution", "Institution")
+                        .WithMany()
+                        .HasForeignKey("InstitutionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("smart_class.Core.Entities.Institution", null)
+                        .WithMany("Admins")
+                        .HasForeignKey("InstitutionId1")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Institution");
                 });
 
             modelBuilder.Entity("smart_class.Core.Entities.Course", b =>
@@ -285,9 +324,9 @@ namespace smart_class.Data.Migrations
             modelBuilder.Entity("smart_class.Core.Entities.Group", b =>
                 {
                     b.HasOne("smart_class.Core.Entities.Institution", "Institution")
-                        .WithMany()
+                        .WithMany("Groups")
                         .HasForeignKey("InstitutionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Institution");
@@ -310,9 +349,38 @@ namespace smart_class.Data.Migrations
 
             modelBuilder.Entity("smart_class.Core.Entities.Student", b =>
                 {
-                    b.HasOne("smart_class.Core.Entities.Group", null)
+                    b.HasOne("smart_class.Core.Entities.Group", "Group")
                         .WithMany("Students")
-                        .HasForeignKey("GroupId");
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("smart_class.Core.Entities.Institution", "Institution")
+                        .WithMany("Students")
+                        .HasForeignKey("InstitutionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Group");
+
+                    b.Navigation("Institution");
+                });
+
+            modelBuilder.Entity("smart_class.Core.Entities.Teacher", b =>
+                {
+                    b.HasOne("smart_class.Core.Entities.Institution", "Institution")
+                        .WithMany()
+                        .HasForeignKey("InstitutionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("smart_class.Core.Entities.Institution", null)
+                        .WithMany("Teachers")
+                        .HasForeignKey("InstitutionId1")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Institution");
                 });
 
             modelBuilder.Entity("smart_class.Core.Entities.Course", b =>
@@ -328,6 +396,17 @@ namespace smart_class.Data.Migrations
             modelBuilder.Entity("smart_class.Core.Entities.Group", b =>
                 {
                     b.Navigation("Students");
+                });
+
+            modelBuilder.Entity("smart_class.Core.Entities.Institution", b =>
+                {
+                    b.Navigation("Admins");
+
+                    b.Navigation("Groups");
+
+                    b.Navigation("Students");
+
+                    b.Navigation("Teachers");
                 });
 #pragma warning restore 612, 618
         }

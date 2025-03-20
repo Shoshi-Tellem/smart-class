@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using smart_class.Api.Entities;
 using smart_class.Core.DTOs;
@@ -11,6 +12,7 @@ namespace smart_class.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class LessonController : ControllerBase
     {
         private readonly ILessonService _lessonService;
@@ -38,23 +40,24 @@ namespace smart_class.Api.Controllers
             return Ok(_mapper.Map<LessonDto>(lesson));
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpPost]
         public async Task<ActionResult<Lesson>> Post([FromBody] LessonPostPut lessonPost)
         {
             if (lessonPost == null)
                 return BadRequest("Lesson cannot be null.");
-            Lesson addedLesson = await _lessonService.AddLessonAsync(new Lesson { Date = lessonPost.Date });
+            Lesson addedLesson = await _lessonService.AddLessonAsync(new Lesson { Status = lessonPost.Status, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now });
             return CreatedAtAction(nameof(Get), new { id = addedLesson.Id }, addedLesson);
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpPut("{id}")]
-        public async Task<ActionResult<Lesson>> Put(int id, [FromBody] LessonPostPut lessonPut)
+        public async Task<ActionResult<Lesson>> Put(int id)
         {
-            if (lessonPut == null)
-                return BadRequest("Lesson cannot be null.");
-            Lesson? updatedLesson = await _lessonService.UpdateLessonAsync(id, new Lesson { Date = lessonPut.Date });
-            if (updatedLesson == null)
+            Lesson? lesson = await _lessonService.GetLessonByIdAsync(id);
+            if (lesson == null)
                 return NotFound();
+            Lesson? updatedLesson = await _lessonService.UpdateLessonAsync(id, new Lesson { Status = !lesson.Status, UpdatedAt = DateTime.Now });
             return Ok(updatedLesson);
         }
 

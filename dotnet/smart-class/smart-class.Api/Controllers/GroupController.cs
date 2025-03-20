@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using smart_class.Api.Entities;
 using smart_class.Core.DTOs;
@@ -20,6 +21,7 @@ namespace smart_class.Api.Controllers
             _mapper = mapper;
         }
 
+        [Authorize(Roles = "Admin, Teacher")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GroupDto>>> Get()
         {
@@ -27,6 +29,7 @@ namespace smart_class.Api.Controllers
             return Ok(_mapper.Map<IEnumerable<GroupDto>>(groups));
         }
 
+        [Authorize(Roles = "Admin, Teacher")]
         [HttpGet("{id}")]
         public async Task<ActionResult<GroupDto>> Get(int id)
         {
@@ -36,6 +39,7 @@ namespace smart_class.Api.Controllers
             return Ok(_mapper.Map<GroupDto>(group));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult<Group>> Post([FromBody] GroupPostPut groupPost)
         {
@@ -45,6 +49,7 @@ namespace smart_class.Api.Controllers
             return CreatedAtAction(nameof(Get), new { id = addedGroup.Id }, addedGroup);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<ActionResult<Group>> Put(int id, [FromBody] GroupPostPut groupPut)
         {
@@ -56,6 +61,7 @@ namespace smart_class.Api.Controllers
             return Ok(updatedGroup);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Group>> Delete(int id)
         {

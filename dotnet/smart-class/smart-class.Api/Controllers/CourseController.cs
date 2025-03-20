@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization; // הוספת ספריית האימות
 using Microsoft.AspNetCore.Mvc;
 using smart_class.Api.Entities;
 using smart_class.Core.DTOs;
@@ -38,6 +39,7 @@ namespace smart_class.Api.Controllers
             return Ok(_mapper.Map<CourseDto>(course));
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpPost]
         public async Task<ActionResult<Course>> Post([FromBody] CoursePostPut coursePost)
         {
@@ -47,6 +49,7 @@ namespace smart_class.Api.Controllers
             return CreatedAtAction(nameof(Get), new { id = addedCourse.Id }, addedCourse);
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpPut("{id}")]
         public async Task<ActionResult<Course>> Put(int id, [FromBody] CoursePostPut coursePut)
         {
@@ -58,6 +61,7 @@ namespace smart_class.Api.Controllers
             return Ok(updatedCourse);
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Course>> Delete(int id)
         {

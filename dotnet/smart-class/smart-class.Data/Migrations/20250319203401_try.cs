@@ -6,28 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace smart_class.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class deleteMigrations : Migration
+    public partial class @try : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Admin",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Admin", x => x.Id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "File",
                 columns: table => new
@@ -59,20 +42,35 @@ namespace smart_class.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Teacher",
+                name: "Admin",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    InstitutionId1 = table.Column<int>(type: "int", nullable: false),
+                    InstitutionId2 = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    InstitutionId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Teacher", x => x.Id);
+                    table.PrimaryKey("PK_Admin", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Admin_Institution_InstitutionId",
+                        column: x => x.InstitutionId,
+                        principalTable: "Institution",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Admin_Institution_InstitutionId1",
+                        column: x => x.InstitutionId1,
+                        principalTable: "Institution",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -91,6 +89,69 @@ namespace smart_class.Data.Migrations
                     table.PrimaryKey("PK_Group", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Group_Institution_InstitutionId",
+                        column: x => x.InstitutionId,
+                        principalTable: "Institution",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Teacher",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    InstitutionId1 = table.Column<int>(type: "int", nullable: false),
+                    InstitutionId2 = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    InstitutionId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Teacher", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Teacher_Institution_InstitutionId",
+                        column: x => x.InstitutionId,
+                        principalTable: "Institution",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Teacher_Institution_InstitutionId1",
+                        column: x => x.InstitutionId1,
+                        principalTable: "Institution",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Student",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    GroupId = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    InstitutionId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Student", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Student_Group_GroupId",
+                        column: x => x.GroupId,
+                        principalTable: "Group",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Student_Institution_InstitutionId",
                         column: x => x.InstitutionId,
                         principalTable: "Institution",
                         principalColumn: "Id",
@@ -118,29 +179,6 @@ namespace smart_class.Data.Migrations
                         principalTable: "Teacher",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Student",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    GroupId = table.Column<int>(type: "int", nullable: true),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Student", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Student_Group_GroupId",
-                        column: x => x.GroupId,
-                        principalTable: "Group",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -172,6 +210,16 @@ namespace smart_class.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Admin_InstitutionId",
+                table: "Admin",
+                column: "InstitutionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Admin_InstitutionId1",
+                table: "Admin",
+                column: "InstitutionId1");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Course_TeacherId",
                 table: "Course",
                 column: "TeacherId");
@@ -195,6 +243,21 @@ namespace smart_class.Data.Migrations
                 name: "IX_Student_GroupId",
                 table: "Student",
                 column: "GroupId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Student_InstitutionId",
+                table: "Student",
+                column: "InstitutionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teacher_InstitutionId",
+                table: "Teacher",
+                column: "InstitutionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Teacher_InstitutionId1",
+                table: "Teacher",
+                column: "InstitutionId1");
         }
 
         /// <inheritdoc />

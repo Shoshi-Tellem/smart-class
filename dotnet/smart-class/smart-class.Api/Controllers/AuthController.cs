@@ -51,7 +51,8 @@ public class AuthController(IConfiguration configuration, DataContext context) :
         {
             new Claim(ClaimTypes.Name, user.Name),
             new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Role, role)
+            new Claim(ClaimTypes.Role, role),
+            new Claim("InstitutionId", user.InstitutionId.ToString())
         };
 
         var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetValue<string>("JWT:Key")));
