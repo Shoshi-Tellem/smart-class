@@ -3,24 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|solutionrelative:smart-class.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.api\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|solutionrelative:smart-class.api\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|solutionrelative:smart-class.api\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.core\\entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|solutionrelative:smart-class.core\\entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.api\\entities\\coursepostput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|solutionrelative:smart-class.api\\entities\\coursepostput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.core\\dtos\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|solutionrelative:smart-class.core\\dtos\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.api\\controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|solutionrelative:smart-class.api\\controllers\\institutioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C953485A-1044-4452-B42B-5B8F955C1BFD}|smart-class.Service\\smart-class.Service.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.service\\institutionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C953485A-1044-4452-B42B-5B8F955C1BFD}|smart-class.Service\\smart-class.Service.csproj|solutionrelative:smart-class.service\\institutionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|solutionrelative:smart-class.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.api\\entities\\institutionpostput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|solutionrelative:smart-class.api\\entities\\institutionpostput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|solutionrelative:smart-class.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.core\\dtos\\institutiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|solutionrelative:smart-class.core\\dtos\\institutiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.api\\middlewares\\middlewareextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4C3BF0A-827C-47AA-9410-67B93F99AB62}|smart-class.Api\\smart-class.Api.csproj|solutionrelative:smart-class.api\\middlewares\\middlewareextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.core\\entities\\institution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|solutionrelative:smart-class.core\\entities\\institution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.core\\extensions\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A185AF4-F6C3-40F6-BA4B-6D0F2C79D64A}|smart-class.Core\\smart-class.Core.csproj|solutionrelative:smart-class.core\\extensions\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C953485A-1044-4452-B42B-5B8F955C1BFD}|smart-class.Service\\smart-class.Service.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.service\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C953485A-1044-4452-B42B-5B8F955C1BFD}|smart-class.Service\\smart-class.Service.csproj|solutionrelative:smart-class.service\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BED81691-07B0-4E94-93E2-4C927C4EB520}|smart-class.Data\\smart-class.Data.csproj|c:\\users\\user\\desktop\\\u05E9.\u05D1\\dot .net core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.data\\migrations\\20250322181234_try.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BED81691-07B0-4E94-93E2-4C927C4EB520}|smart-class.Data\\smart-class.Data.csproj|solutionrelative:smart-class.data\\migrations\\20250322181234_try.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,68 +73,171 @@
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Program.cs",
-              "RelativeDocumentMoniker": "smart-class.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Program.cs",
-              "RelativeToolTip": "smart-class.Api\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEQAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T23:45:32.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InstitutionPostPut.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Entities\\InstitutionPostPut.cs",
-              "RelativeDocumentMoniker": "smart-class.Api\\Entities\\InstitutionPostPut.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Entities\\InstitutionPostPut.cs",
-              "RelativeToolTip": "smart-class.Api\\Entities\\InstitutionPostPut.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:50:48.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InstitutionController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\InstitutionController.cs",
-              "RelativeDocumentMoniker": "smart-class.Api\\Controllers\\InstitutionController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\InstitutionController.cs",
-              "RelativeToolTip": "smart-class.Api\\Controllers\\InstitutionController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAiwC0AAACGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:50:41.31Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "InstitutionService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Service\\InstitutionService.cs",
-              "RelativeDocumentMoniker": "smart-class.Service\\InstitutionService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Service\\InstitutionService.cs",
-              "RelativeToolTip": "smart-class.Service\\InstitutionService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAkwA0AAAAXAAAAAAAAAA==",
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\Entities\\Teacher.cs",
+              "RelativeDocumentMoniker": "smart-class.Core\\Entities\\Teacher.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\Entities\\Teacher.cs",
+              "RelativeToolTip": "smart-class.Core\\Entities\\Teacher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:50:33.013Z",
+              "WhenOpened": "2025-03-23T19:33:58.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "InstitutionDto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\DTOs\\InstitutionDto.cs",
-              "RelativeDocumentMoniker": "smart-class.Core\\DTOs\\InstitutionDto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\DTOs\\InstitutionDto.cs",
-              "RelativeToolTip": "smart-class.Core\\DTOs\\InstitutionDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAxwA8AAAAvAAAAAAAAAA==",
+              "Title": "CourseDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\DTOs\\CourseDto.cs",
+              "RelativeDocumentMoniker": "smart-class.Core\\DTOs\\CourseDto.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\DTOs\\CourseDto.cs",
+              "RelativeToolTip": "smart-class.Core\\DTOs\\CourseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:46:57.796Z",
+              "WhenOpened": "2025-03-23T19:17:09.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeacherController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\TeacherController.cs",
+              "RelativeDocumentMoniker": "smart-class.Api\\Controllers\\TeacherController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\TeacherController.cs*",
+              "RelativeToolTip": "smart-class.Api\\Controllers\\TeacherController.cs*",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAxwJ8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T18:57:14.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "smart-class.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "smart-class.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAA5wDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T18:49:29.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoursePostPut.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Entities\\CoursePostPut.cs",
+              "RelativeDocumentMoniker": "smart-class.Api\\Entities\\CoursePostPut.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Entities\\CoursePostPut.cs",
+              "RelativeToolTip": "smart-class.Api\\Entities\\CoursePostPut.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T18:41:41.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MiddlewareExtension.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Middlewares\\MiddlewareExtension.cs",
+              "RelativeDocumentMoniker": "smart-class.Api\\Middlewares\\MiddlewareExtension.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Middlewares\\MiddlewareExtension.cs",
+              "RelativeToolTip": "smart-class.Api\\Middlewares\\MiddlewareExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T15:45:21.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Institution.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\Entities\\Institution.cs",
+              "RelativeDocumentMoniker": "smart-class.Core\\Entities\\Institution.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\Entities\\Institution.cs",
+              "RelativeToolTip": "smart-class.Core\\Entities\\Institution.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T20:12:46.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InstitutionController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\InstitutionController.cs",
+              "RelativeDocumentMoniker": "smart-class.Api\\Controllers\\InstitutionController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\InstitutionController.cs",
+              "RelativeToolTip": "smart-class.Api\\Controllers\\InstitutionController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswGAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T20:10:11.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\Extensions\\User.cs",
+              "RelativeDocumentMoniker": "smart-class.Core\\Extensions\\User.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Core\\Extensions\\User.cs",
+              "RelativeToolTip": "smart-class.Core\\Extensions\\User.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T20:06:42.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Program.cs",
+              "RelativeDocumentMoniker": "smart-class.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Program.cs",
+              "RelativeToolTip": "smart-class.Api\\Program.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T18:37:04.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20250322181234_try.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Data\\Migrations\\20250322181234_try.cs",
+              "RelativeDocumentMoniker": "smart-class.Data\\Migrations\\20250322181234_try.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Data\\Migrations\\20250322181234_try.cs",
+              "RelativeToolTip": "smart-class.Data\\Migrations\\20250322181234_try.cs",
+              "ViewState": "AgIAAPYAAAAAAAAAAAAiwPwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T18:12:34.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Service\\CourseService.cs",
+              "RelativeDocumentMoniker": "smart-class.Service\\CourseService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Service\\CourseService.cs",
+              "RelativeToolTip": "smart-class.Service\\CourseService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwCkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T14:31:13.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "smart-class.Api\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "smart-class.Api\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAD4vycAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T14:31:23.134Z",
               "EditorCaption": ""
             }
           ]

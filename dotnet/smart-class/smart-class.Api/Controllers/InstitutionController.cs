@@ -23,15 +23,15 @@ namespace smart_class.Api.Controllers
             _mapper = mapper;
         }
 
-        [Authorize(Policy = "DeveloperOnly")]
+        //[Authorize(Policy = "DeveloperOnly")]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<InstitutionDto>>> Get()
+        public async Task<ActionResult<IEnumerable<InstitutionDto>>> GetAll()
         {
             IEnumerable<Institution> institutions = await _institutionService.GetInstitutionsAsync();
             return Ok(_mapper.Map<IEnumerable<InstitutionDto>>(institutions));
         }
 
-        [Authorize(Policy = "DeveloperOnly")]
+        //[Authorize(Policy = "DeveloperOnly")]
         [HttpGet("{id}")]
         public async Task<ActionResult<InstitutionDto>> Get(int id)
         {
@@ -41,9 +41,9 @@ namespace smart_class.Api.Controllers
             return Ok(_mapper.Map<InstitutionDto>(institution));
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpGet("admin")]
-        public async Task<ActionResult<InstitutionDto>> GetForAdmins()
+        public async Task<ActionResult<InstitutionDto>> Get()
         {
             int id = int.Parse(User.FindFirst("InstitutionId")?.Value);
 
@@ -59,11 +59,19 @@ namespace smart_class.Api.Controllers
         {
             if (institutionPost == null)
                 return BadRequest("Institution cannot be null.");
-            Institution addedInstitution = await _institutionService.AddInstitutionAsync(new Institution { Name = institutionPost.Name });
+            Institution addedInstitution = await _institutionService.AddInstitutionAsync(new Institution
+            { 
+                Name = institutionPost.Name,
+                Address = institutionPost.Address,
+                Admins=new List<Admin>(),
+                Teachers=new List<Teacher>(),
+                Students=new List<Student>(),
+                Groups=new List<Group>()
+            });
             return CreatedAtAction(nameof(Get), new { id = addedInstitution.Id }, addedInstitution);
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<ActionResult<Institution>> Put([FromBody] InstitutionPostPut institutionPut)
         {
@@ -76,7 +84,7 @@ namespace smart_class.Api.Controllers
             return Ok(updatedInstitution);
         }
 
-        [Authorize(Policy = "DeveloperOnly")]
+        //[Authorize(Policy = "DeveloperOnly")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Institution>> Delete(int id)
         {
@@ -86,7 +94,7 @@ namespace smart_class.Api.Controllers
             return Ok(deletedInstitution);
         }
 
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpDelete("admin")]
         public async Task<ActionResult<Institution>> Delete()
         {

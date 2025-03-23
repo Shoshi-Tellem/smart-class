@@ -47,8 +47,6 @@ namespace smart_class.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    InstitutionId1 = table.Column<int>(type: "int", nullable: false),
-                    InstitutionId2 = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -65,12 +63,6 @@ namespace smart_class.Data.Migrations
                         principalTable: "Institution",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Admin_Institution_InstitutionId1",
-                        column: x => x.InstitutionId1,
-                        principalTable: "Institution",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -92,7 +84,7 @@ namespace smart_class.Data.Migrations
                         column: x => x.InstitutionId,
                         principalTable: "Institution",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -101,8 +93,6 @@ namespace smart_class.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    InstitutionId1 = table.Column<int>(type: "int", nullable: false),
-                    InstitutionId2 = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -119,12 +109,6 @@ namespace smart_class.Data.Migrations
                         principalTable: "Institution",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Teacher_Institution_InstitutionId1",
-                        column: x => x.InstitutionId1,
-                        principalTable: "Institution",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -155,7 +139,7 @@ namespace smart_class.Data.Migrations
                         column: x => x.InstitutionId,
                         principalTable: "Institution",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -188,7 +172,7 @@ namespace smart_class.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CourseId = table.Column<int>(type: "int", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FileId = table.Column<int>(type: "int", nullable: true)
@@ -213,11 +197,6 @@ namespace smart_class.Data.Migrations
                 name: "IX_Admin_InstitutionId",
                 table: "Admin",
                 column: "InstitutionId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Admin_InstitutionId1",
-                table: "Admin",
-                column: "InstitutionId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Course_TeacherId",
@@ -253,11 +232,6 @@ namespace smart_class.Data.Migrations
                 name: "IX_Teacher_InstitutionId",
                 table: "Teacher",
                 column: "InstitutionId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Teacher_InstitutionId1",
-                table: "Teacher",
-                column: "InstitutionId1");
         }
 
         /// <inheritdoc />

@@ -15,7 +15,7 @@ namespace smart_class.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class AdminController(IAdminService adminService, IMapper mapper) : ControllerBase
     {
         private readonly IAdminService _adminService = adminService;
@@ -45,7 +45,15 @@ namespace smart_class.Api.Controllers
         {
             if (adminPost == null)
                 return BadRequest("Admin cannot be null.");
-            Admin addedAdmin = await _adminService.AddAdminAsync(new Admin { Name = adminPost.Name, Password = adminPost.Password, Email = adminPost.Email, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now });
+            Admin addedAdmin = await _adminService.AddAdminAsync(new Admin
+            {
+                Name = adminPost.Name,
+                Email = adminPost.Email,
+                Password = "1234",
+                InstitutionId = 3,
+                CreatedAt = DateTime.Now,
+                UpdatedAt = DateTime.Now
+            });
             return CreatedAtAction(nameof(Get), new { id = addedAdmin.Id }, addedAdmin);
         }
 
@@ -55,7 +63,7 @@ namespace smart_class.Api.Controllers
         {
             if (adminPut == null)
                 return BadRequest("Admin cannot be null.");
-            Admin? updatedAdmin = await _adminService.UpdateAdminAsync(id, new Admin { Name = adminPut.Name, Password = adminPut.Password, Email = adminPut.Email, UpdatedAt = DateTime.Now });
+            Admin? updatedAdmin = await _adminService.UpdateAdminAsync(id, new Admin { Name = adminPut.Name, Email = adminPut.Email });
             if (updatedAdmin == null)
                 return NotFound();
             return Ok(updatedAdmin);

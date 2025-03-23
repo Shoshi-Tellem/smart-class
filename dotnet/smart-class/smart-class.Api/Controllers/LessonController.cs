@@ -46,7 +46,8 @@ namespace smart_class.Api.Controllers
         {
             if (lessonPost == null)
                 return BadRequest("Lesson cannot be null.");
-            Lesson addedLesson = await _lessonService.AddLessonAsync(new Lesson { Status = lessonPost.Status, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now });
+            int id = int.Parse(User.FindFirst("Id")?.Value);
+            Lesson addedLesson = await _lessonService.AddLessonAsync(new Lesson { CourseId = id, Status = lessonPost.Status, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now });
             return CreatedAtAction(nameof(Get), new { id = addedLesson.Id }, addedLesson);
         }
 
@@ -57,16 +58,22 @@ namespace smart_class.Api.Controllers
             Lesson? lesson = await _lessonService.GetLessonByIdAsync(id);
             if (lesson == null)
                 return NotFound();
-            Lesson? updatedLesson = await _lessonService.UpdateLessonAsync(id, new Lesson { Status = !lesson.Status, UpdatedAt = DateTime.Now });
+            if (lesson.Course.TeacherId != int.Parse(User.FindFirst("Id")?.Value))
+                return Forbid();
+            Lesson? updatedLesson = await _lessonService.UpdateLessonAsync(id, new Lesson { Status = !lesson.Status });
             return Ok(updatedLesson);
         }
 
+        [Authorize(Roles = "Teacher")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Lesson>> Delete(int id)
         {
-            Lesson? deletedLesson = await _lessonService.DeleteAsync(id);
-            if (deletedLesson == null)
+            Lesson? lesson = await _lessonService.GetLessonByIdAsync(id);
+            if (lesson == null)
                 return NotFound();
+            if (lesson.Course.TeacherId != int.Parse(User.FindFirst("Id")?.Value))
+                return Forbid();
+            Lesson? deletedLesson = await _lessonService.DeleteAsync(id);
             return Ok(deletedLesson);
         }
     }

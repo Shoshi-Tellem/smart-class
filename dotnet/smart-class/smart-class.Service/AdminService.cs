@@ -30,6 +30,7 @@ namespace smart_class.Service
                 return null;
             existingAdmin.Name = admin.Name;
             existingAdmin.Email = admin.Email;
+            existingAdmin.UpdatedAt = DateTime.Now;
             Admin updatedAdmin = await _adminRepository.UpdateAsync(existingAdmin);
             await _repositoryManager.SaveAsync();
             return updatedAdmin;

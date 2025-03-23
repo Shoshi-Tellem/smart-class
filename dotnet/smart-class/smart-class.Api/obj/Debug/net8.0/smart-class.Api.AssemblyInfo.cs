@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("smart-class.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76f9b21e2ea5873d6bf7475fc22ea280f43965b9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d37694bd8b5f8ea5801738dd85fb21c67f0d24f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("smart-class.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("smart-class.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,7 +10,6 @@ namespace smart_class.Core.Entities
 {
     public class Student : User
     {
-
         //[ForeignKey("Group")]
         public int GroupId { get; set; }
         public Group Group { get; set; }
