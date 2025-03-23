@@ -7,5 +7,8 @@ using smart_class.Core.Classes;
 
 namespace smart_class.Core.Entities
 {
-    public class Teacher : User { }
+    public class Teacher : User
+    {
+        public IEnumerable<Course> Courses { get; set; }
+    }
 }

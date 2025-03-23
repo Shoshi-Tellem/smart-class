@@ -533,7 +533,7 @@
   },
   {
     "ContainingType": "smart_class.Api.Controllers.InstitutionController",
-    "Method": "Get",
+    "Method": "GetAll",
     "RelativePath": "api/Institution",
     "HttpMethod": "GET",
     "IsController": true,
@@ -579,6 +579,32 @@
   },
   {
     "ContainingType": "smart_class.Api.Controllers.InstitutionController",
+    "Method": "Put",
+    "RelativePath": "api/Institution",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "institutionPut",
+        "Type": "smart_class.Api.Entities.InstitutionPostPut",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "smart_class.Core.Entities.Institution",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "smart_class.Api.Controllers.InstitutionController",
     "Method": "Get",
     "RelativePath": "api/Institution/{id}",
     "HttpMethod": "GET",
@@ -605,20 +631,15 @@
   },
   {
     "ContainingType": "smart_class.Api.Controllers.InstitutionController",
-    "Method": "Put",
+    "Method": "Delete",
     "RelativePath": "api/Institution/{id}",
-    "HttpMethod": "PUT",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "institutionPut",
-        "Type": "smart_class.Api.Entities.InstitutionPostPut",
         "IsRequired": true
       }
     ],
@@ -636,18 +657,32 @@
   },
   {
     "ContainingType": "smart_class.Api.Controllers.InstitutionController",
+    "Method": "Get",
+    "RelativePath": "api/Institution/admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "smart_class.Core.DTOs.InstitutionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "smart_class.Api.Controllers.InstitutionController",
     "Method": "Delete",
-    "RelativePath": "api/Institution/{id}",
+    "RelativePath": "api/Institution/admin",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "smart_class.Core.Entities.Institution",
@@ -744,11 +779,6 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "lessonPut",
-        "Type": "smart_class.Api.Entities.LessonPostPut",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -790,137 +820,8 @@
     ]
   },
   {
-    "ContainingType": "smart_class.Api.Controllers.StudentController",
-    "Method": "Get",
-    "RelativePath": "api/Student",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[smart_class.Core.DTOs.StudentDto, smart-class.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "smart_class.Api.Controllers.StudentController",
-    "Method": "Post",
-    "RelativePath": "api/Student",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "studentPost",
-        "Type": "smart_class.Api.Entities.StudentPostPut",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "smart_class.Core.Entities.Student",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "smart_class.Api.Controllers.StudentController",
-    "Method": "Get",
-    "RelativePath": "api/Student/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "smart_class.Core.DTOs.StudentDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "smart_class.Api.Controllers.StudentController",
-    "Method": "Put",
-    "RelativePath": "api/Student/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "studentPut",
-        "Type": "smart_class.Api.Entities.StudentPostPut",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "smart_class.Core.Entities.Student",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "smart_class.Api.Controllers.StudentController",
-    "Method": "Delete",
-    "RelativePath": "api/Student/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "smart_class.Core.Entities.Student",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
     "ContainingType": "smart_class.Api.Controllers.TeacherController",
-    "Method": "Get",
+    "Method": "GetAll",
     "RelativePath": "api/Teacher",
     "HttpMethod": "GET",
     "IsController": true,
@@ -1038,6 +939,72 @@
     "ReturnTypes": [
       {
         "Type": "smart_class.Core.Entities.Teacher",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "smart_class.Api.Controllers.TeacherController",
+    "Method": "GetMe",
+    "RelativePath": "api/Teacher/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "smart_class.Core.DTOs.TeacherDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "smart_class.Api.Controllers.TeacherController",
+    "Method": "PutMe",
+    "RelativePath": "api/Teacher/me",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "smart_class.Core.Entities.Teacher",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "smart_class.Api.Controllers.TeacherController",
+    "Method": "GetMyCourses",
+    "RelativePath": "api/Teacher/myCourses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[smart_class.Core.DTOs.CourseDto, smart-class.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -23,24 +23,5 @@ namespace smart_class.Data
             optionsBuilder.UseSqlServer(_configuration["DbConnectionString"]);
             optionsBuilder.LogTo(message => Debug.WriteLine(message));
         }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Institution>()
-                .HasMany(i => i.Admins)
-                .WithOne()
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<Institution>()
-                .HasMany(i => i.Teachers)
-                .WithOne()
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<Institution>()
-                .HasMany(i => i.Groups)
-                .WithOne(g => g.Institution) // נניח ש-Group יש לו Property בשם Institution
-                .HasForeignKey(g => g.InstitutionId) // כאן אתה קובע את המפתח הזר
-                .OnDelete(DeleteBehavior.Restrict);
-        }
     }
 }

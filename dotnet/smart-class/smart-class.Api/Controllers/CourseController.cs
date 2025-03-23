@@ -39,13 +39,32 @@ namespace smart_class.Api.Controllers
             return Ok(_mapper.Map<CourseDto>(course));
         }
 
-        [Authorize(Roles = "Teacher")]
+        //[Authorize(Roles = "Teacher")]
         [HttpPost]
         public async Task<ActionResult<Course>> Post([FromBody] CoursePostPut coursePost)
         {
             if (coursePost == null)
                 return BadRequest("Course cannot be null.");
-            Course addedCourse = await _courseService.AddCourseAsync(new Course { Name = coursePost.Name });
+
+            // קבלת ה-ID של המורה מהטוקן
+            var id = User.FindFirst("Id")?.Value;
+
+            if (id == null)
+                return Unauthorized("Teacher ID not found in token.");
+
+            // המרה ל-ID של המורה
+            int teacherId = int.Parse(id);
+
+            // יצירת הקורס
+            Course addedCourse = await _courseService.AddCourseAsync(new Course
+            {
+                Name = coursePost.Name,
+                Description = coursePost.Description,
+                TeacherId = teacherId,
+                UpdatedAt = DateTime.Now,
+                CreatedAt = DateTime.Now
+            });
+
             return CreatedAtAction(nameof(Get), new { id = addedCourse.Id }, addedCourse);
         }
 
@@ -55,7 +74,9 @@ namespace smart_class.Api.Controllers
         {
             if (coursePut == null)
                 return BadRequest("Course cannot be null.");
-            Course? updatedCourse = await _courseService.UpdateCourseAsync(id, new Course { Name = coursePut.Name });
+            //if (coursePut.TeacherId != int.Parse(User.FindFirst("Id")?.Value))
+            //    return Forbid();
+            Course? updatedCourse = await _courseService.UpdateCourseAsync(id, new Course { Name = coursePut.Name, Description = coursePut.Description });
             if (updatedCourse == null)
                 return NotFound();
             return Ok(updatedCourse);
@@ -65,9 +86,12 @@ namespace smart_class.Api.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Course>> Delete(int id)
         {
-            Course? deletedCourse = await _courseService.DeleteAsync(id);
-            if (deletedCourse == null)
+            Course course = await _courseService.GetCourseByIdAsync(id);
+            if (course == null)
                 return NotFound();
+            if (course.TeacherId != int.Parse(User.FindFirst("Id")?.Value))
+                return Forbid();
+            Course? deletedCourse = await _courseService.DeleteAsync(id);
             return Ok(deletedCourse);
         }
     }

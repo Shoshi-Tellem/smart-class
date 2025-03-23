@@ -1,6 +1,15 @@
-import '../styles/Home.css'
+// Home.tsx
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../styles/Home.css';
 
-const Home = () => {
+const Home: React.FC = () => {
+    const navigate = useNavigate();
+
+    const handleLoginClick = () => {
+        navigate('/login');
+    };
+
     return (
         <div className="home-container">
             <header className="home-header">
@@ -9,9 +18,7 @@ const Home = () => {
             </header>
             <nav className="home-nav">
                 <ul>
-                    <li><a href="/login">כניסת מנהל</a></li>
-                    <li><a href="/login">כניסת מורה</a></li>
-                    <li><a href="/login">כניסת סטודנט</a></li>
+                    <li><button onClick={handleLoginClick}>כניסת לאפליקציה</button></li>
                 </ul>
             </nav>
             <section className="home-features">

@@ -6,5 +6,10 @@
         {
             return builder.UseMiddleware<ShabatMiddleWare>();
         }
+
+        public static IApplicationBuilder UseJwt(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<JwtMiddleware>();
+        }
     }
 }

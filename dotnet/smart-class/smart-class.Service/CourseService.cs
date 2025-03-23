@@ -38,8 +38,8 @@ namespace smart_class.Service
             if (existingCourse == null)
                 return null;
 
-            existingCourse.Name = course.Name; // Assuming Course has a Name property
-            existingCourse.Description = course.Description; // Assuming Course has a Description property
+            existingCourse.Name = course.Name;
+            existingCourse.Description = course.Description;
             Course updatedCourse = await _courseRepository.UpdateAsync(existingCourse);
             await _repositoryManager.SaveAsync();
             return updatedCourse;

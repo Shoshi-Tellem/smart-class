@@ -40,12 +40,6 @@ namespace smart_class.Data.Migrations
                     b.Property<int>("InstitutionId")
                         .HasColumnType("int");
 
-                    b.Property<int>("InstitutionId1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("InstitutionId2")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -60,8 +54,6 @@ namespace smart_class.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("InstitutionId");
-
-                    b.HasIndex("InstitutionId1");
 
                     b.ToTable("Admin");
                 });
@@ -187,11 +179,11 @@ namespace smart_class.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
                     b.Property<int?>("FileId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -264,12 +256,6 @@ namespace smart_class.Data.Migrations
                     b.Property<int>("InstitutionId")
                         .HasColumnType("int");
 
-                    b.Property<int>("InstitutionId1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("InstitutionId2")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -285,23 +271,15 @@ namespace smart_class.Data.Migrations
 
                     b.HasIndex("InstitutionId");
 
-                    b.HasIndex("InstitutionId1");
-
                     b.ToTable("Teacher");
                 });
 
             modelBuilder.Entity("smart_class.Core.Entities.Admin", b =>
                 {
                     b.HasOne("smart_class.Core.Entities.Institution", "Institution")
-                        .WithMany()
+                        .WithMany("Admins")
                         .HasForeignKey("InstitutionId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("smart_class.Core.Entities.Institution", null)
-                        .WithMany("Admins")
-                        .HasForeignKey("InstitutionId1")
-                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Institution");
@@ -323,7 +301,7 @@ namespace smart_class.Data.Migrations
                     b.HasOne("smart_class.Core.Entities.Institution", "Institution")
                         .WithMany("Groups")
                         .HasForeignKey("InstitutionId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Institution");
@@ -366,15 +344,9 @@ namespace smart_class.Data.Migrations
             modelBuilder.Entity("smart_class.Core.Entities.Teacher", b =>
                 {
                     b.HasOne("smart_class.Core.Entities.Institution", "Institution")
-                        .WithMany()
+                        .WithMany("Teachers")
                         .HasForeignKey("InstitutionId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("smart_class.Core.Entities.Institution", null)
-                        .WithMany("Teachers")
-                        .HasForeignKey("InstitutionId1")
-                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Institution");

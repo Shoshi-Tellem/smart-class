@@ -38,7 +38,8 @@ namespace smart_class.Service
             if (existingLesson == null)
                 return null;
 
-            existingLesson.Date = lesson.Date; // Assuming Lesson has a Title property
+            existingLesson.Status = lesson.Status;
+            existingLesson.UpdatedAt = DateTime.Now;
             Lesson updatedLesson = await _lessonRepository.UpdateAsync(existingLesson);
             await _repositoryManager.SaveAsync();
             return updatedLesson;

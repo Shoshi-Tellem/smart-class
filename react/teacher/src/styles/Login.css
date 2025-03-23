@@ -1,56 +1,58 @@
-/* Login.css */
 .login-container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e7f80, #c3d5d6);
+    animation: backgroundAnimation 10s infinite alternate;
 }
 
-.login-title {
-    text-align: center;
-    margin-bottom: 20px;
+@keyframes backgroundAnimation {
+    0% { background-color: #6e7f80; }
+    100% { background-color: #c3d5d6; }
 }
 
 .login-form {
-    display: flex;
-    flex-direction: column;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.login-form:hover {
+    transform: scale(1.05);
 }
 
-.form-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-input {
+.input-field {
+    width: 100%;
     padding: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
+    transition: border-color 0.3s;
 }
 
-.input-error {
-    border-color: red;
-}
-
-.error-message {
-    color: red;
-    font-size: 0.8em;
+.input-field:focus {
+    border-color: #007bff;
 }
 
 .login-button {
+    width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .login-button:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
 }
