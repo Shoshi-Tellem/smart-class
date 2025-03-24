@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization; // הוספת ספריית האימות
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using smart_class.Api.Entities;
 using smart_class.Core.DTOs;
 using smart_class.Core.Entities;
 using smart_class.Core.Services;
+using smart_class.Service;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -38,6 +40,22 @@ namespace smart_class.Api.Controllers
                 return NotFound();
             return Ok(_mapper.Map<CourseDto>(course));
         }
+
+        [HttpGet("myCourses")]
+        public async Task<ActionResult<IEnumerable<CourseDto>>> GetMyCourses()
+        {
+            var userId = User.FindFirst("Id")?.Value;
+            if (string.IsNullOrEmpty(userId))
+                return BadRequest("User ID cannot be null or empty.");
+
+            if (!int.TryParse(userId, out int id))
+                return BadRequest("User ID is not a valid integer.");
+
+            IEnumerable<Course> courses = await _courseService.GetCoursesAsync();
+            IEnumerable<Course> filteredCourses = courses.Where(course => course.TeacherId == id); // סינון קורסים לפי TeacherId
+            return Ok(_mapper.Map<IEnumerable<CourseDto>>(filteredCourses));
+        }
+
 
         //[Authorize(Roles = "Teacher")]
         [HttpPost]

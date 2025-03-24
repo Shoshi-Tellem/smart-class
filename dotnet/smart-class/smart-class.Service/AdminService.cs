@@ -35,6 +35,18 @@ namespace smart_class.Service
             await _repositoryManager.SaveAsync();
             return updatedAdmin;
         }
+        public async Task<Admin?> UpdateAdminPasswordAsync(int id, string password)
+        {
+            Admin? existingAdmin = await GetAdminByIdAsync(id);
+            if (existingAdmin == null)
+                return null;
+            existingAdmin.Password = password;
+            existingAdmin.PasswordChanged = true;
+            existingAdmin.UpdatedAt= DateTime.Now;
+            Admin updatedAdmin = await _adminRepository.UpdateAsync(existingAdmin);
+            await _repositoryManager.SaveAsync();
+            return updatedAdmin;
+        }
         public async Task<Admin?> DeleteAsync(int id)
         {
             Admin? existingAdmin = await GetAdminByIdAsync(id);

@@ -8,6 +8,7 @@ namespace smart_class.Core.Services
         Task<Admin?> GetAdminByIdAsync(int id);
         Task<Admin> AddAdminAsync(Admin admin);
         Task<Admin?> UpdateAdminAsync(int id, Admin admin);
+        Task<Admin?> UpdateAdminPasswordAsync(int id, string password);
         Task<Admin?> DeleteAsync(int id);
     }
 }

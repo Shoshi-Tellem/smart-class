@@ -4,6 +4,7 @@ namespace smart_class.Api.Entities
 {
     public class LessonPostPut
     {
-        public bool Status { get; set; }
+        public int CourseId { get; set; }
+        public string Name { get; set; }
     }
 }

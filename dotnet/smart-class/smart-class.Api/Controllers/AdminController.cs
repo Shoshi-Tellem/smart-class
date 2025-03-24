@@ -69,6 +69,22 @@ namespace smart_class.Api.Controllers
             return Ok(updatedAdmin);
         }
 
+        [HttpPut("myPassword")]
+        public async Task<ActionResult<Admin>> Put(string password)
+        {
+            var userId = User.FindFirst("Id")?.Value;
+            if (string.IsNullOrEmpty(userId))
+                return BadRequest("User ID cannot be null or empty.");
+
+            if (!int.TryParse(userId, out int id))
+                return BadRequest("User ID is not a valid integer.");
+
+            Admin? updatedAdmin = await _adminService.UpdateAdminPasswordAsync(id, password);
+            if (updatedAdmin == null)
+                return NotFound();
+            return Ok(updatedAdmin);
+        }
+
         // DELETE api/<AdminController>/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Admin>> Delete(int id)

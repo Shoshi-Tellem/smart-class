@@ -1,10 +1,15 @@
+// store.ts
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import authReducer from './authStore';
+import courseReducer from './courseStore'; // ייבוא ה-reducer של קורסים
+import lessonReducer from './lessonStore'; // ייבוא ה-reducer של שיעורים
 
 const store = configureStore({
     reducer: {
         auth: authReducer,
+        courses: courseReducer,
+        lessons: lessonReducer, // הוספת ה-reducer של שיעורים
     },
 });
 
