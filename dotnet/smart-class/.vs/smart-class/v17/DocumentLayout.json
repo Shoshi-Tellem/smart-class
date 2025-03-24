@@ -110,8 +110,7 @@
               "RelativeToolTip": "smart-class.Core\\Entities\\Lesson.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T13:11:48.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T13:11:48.961Z"
             },
             {
               "$type": "Document",
@@ -123,8 +122,7 @@
               "RelativeToolTip": "smart-class.Api\\Entities\\LessonPostPut.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T13:11:29.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T13:11:29.185Z"
             },
             {
               "$type": "Document",
@@ -134,7 +132,7 @@
               "RelativeDocumentMoniker": "smart-class.Api\\Controllers\\LessonController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\\u05E9.\u05D1\\dot .NET core\\smart class - \u05DE\u05D5\u05E8\u05D4 \u05D1\u05E2\u05E0\u05DF\\dotnet\\smart-class\\smart-class.Api\\Controllers\\LessonController.cs",
               "RelativeToolTip": "smart-class.Api\\Controllers\\LessonController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAmwGUAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAwwGgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T11:39:21.721Z",
               "EditorCaption": ""
@@ -149,8 +147,7 @@
               "RelativeToolTip": "smart-class.Core\\Services\\IAdminService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T11:02:05.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T11:02:05.418Z"
             },
             {
               "$type": "Document",
@@ -162,8 +159,7 @@
               "RelativeToolTip": "smart-class.Service\\AdminService.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAACUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:56:01.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T10:56:01.262Z"
             },
             {
               "$type": "Document",
@@ -175,8 +171,7 @@
               "RelativeToolTip": "smart-class.Api\\Controllers\\AdminController.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAwwEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:40:48.001Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T10:40:48.001Z"
             },
             {
               "$type": "Document",
@@ -200,8 +195,7 @@
               "RelativeToolTip": "smart-class.Core\\DTOs\\CourseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T19:17:09.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T19:17:09.198Z"
             },
             {
               "$type": "Document",
@@ -213,8 +207,7 @@
               "RelativeToolTip": "smart-class.Api\\Controllers\\TeacherController.cs",
               "ViewState": "AgIAAG8AAAAAAAAAAAAqwHwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T18:57:14.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T18:57:14.369Z"
             },
             {
               "$type": "Document",
@@ -226,8 +219,7 @@
               "RelativeToolTip": "smart-class.Api\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwA0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T18:49:29.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T18:49:29.372Z"
             },
             {
               "$type": "Document",
@@ -239,8 +231,7 @@
               "RelativeToolTip": "smart-class.Api\\Entities\\CoursePostPut.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T18:41:41.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T18:41:41.713Z"
             },
             {
               "$type": "Document",
@@ -288,8 +279,7 @@
               "RelativeToolTip": "smart-class.Core\\Extensions\\User.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAzwBAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T20:06:42.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T20:06:42.79Z"
             },
             {
               "$type": "Document",
@@ -337,8 +327,7 @@
               "RelativeToolTip": "smart-class.Api\\Controllers\\CourseController.cs",
               "ViewState": "AgIAAF4AAAAAAAAAAAAuwGkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T14:31:23.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T14:31:23.134Z"
             }
           ]
         }

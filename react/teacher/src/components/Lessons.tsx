@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../stores/store'; 
 import { fetchLessons, addLesson, updateLesson, deleteLesson } from '../stores/lessonStore'; 
+import { Link } from 'react-router-dom'; // הוספת לינק
 
 interface Lesson {
     id: number;
@@ -57,7 +58,7 @@ const Lessons: React.FC<LessonsProps> = ({ courseId }) => {
                 {Array.isArray(lessons) && lessons.length > 0 ? (
                     lessons.map((lesson) => (
                         <li key={lesson.id}>
-                            {lesson.name}
+                            <Link to={`/lessons/${lesson.id}`}>{lesson.name}</Link> {/* הוספת לינק לעמוד השיעור */}
                             <button onClick={() => setEditLesson(lesson)}>ערוך</button>
                             <button onClick={() => handleDeleteLesson(lesson.id)}>מחק</button>
                         </li>
