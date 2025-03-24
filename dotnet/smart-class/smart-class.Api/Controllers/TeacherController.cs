@@ -58,7 +58,7 @@ namespace smart_class.Api.Controllers
             return Ok(_mapper.Map<TeacherDto>(teacher));
         }
 
-        //[Authorize(Roles = "Teacher")]
+        [Authorize(Roles = "Teacher")]
         [HttpGet("myCourses")]
         public async Task<ActionResult<IEnumerable<CourseDto>>> GetMyCourses()
         {

@@ -129,6 +129,32 @@
     ]
   },
   {
+    "ContainingType": "smart_class.Api.Controllers.AdminController",
+    "Method": "Put",
+    "RelativePath": "api/Admin/myPassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "smart_class.Core.Entities.Admin",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AuthController",
     "Method": "LoginAsync",
     "RelativePath": "api/Auth",
@@ -264,6 +290,26 @@
     "ReturnTypes": [
       {
         "Type": "smart_class.Core.Entities.Course",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "smart_class.Api.Controllers.CourseController",
+    "Method": "GetMyCourses",
+    "RelativePath": "api/Course/myCourses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[smart_class.Core.DTOs.CourseDto, smart-class.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -810,6 +856,32 @@
     "ReturnTypes": [
       {
         "Type": "smart_class.Core.Entities.Lesson",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "smart_class.Api.Controllers.LessonController",
+    "Method": "GetMyLessons",
+    "RelativePath": "api/Lesson/myLessons",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[smart_class.Core.DTOs.LessonDto, smart-class.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

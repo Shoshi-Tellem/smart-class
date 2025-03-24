@@ -14,6 +14,7 @@ namespace smart_class.Core.Classes
         public int Id { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
+        public bool PasswordChanged { get; set; }
         public string Email { get; set; }
         [ForeignKey("Institution")]
         public int InstitutionId { get; set; }

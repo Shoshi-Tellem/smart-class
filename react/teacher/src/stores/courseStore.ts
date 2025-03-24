@@ -1,4 +1,5 @@
-import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
+// courseStore.ts
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import apiClient from '../extensions/apiService';
 
 interface Course {
@@ -35,14 +36,13 @@ const courseSlice = createSlice({
 export const { setCourses, addCourse, updateCourse, removeCourse } = courseSlice.actions;
 
 export const fetchCourses = () => async (dispatch: any) => {
-    const response = await apiClient.get<Course[]>('teacher/myCourses'); // עדכון הכתובת ל/myCourses
+    const response = await apiClient.get<Course[]>('https://localhost:7253/api/Course/myCourses');
     dispatch(setCourses(response.data));
 };
 
 export const createCourse = (course: NewCourse) => async (dispatch: any) => {
     const response = await apiClient.post<Course>('/course', course);
     dispatch(addCourse(response.data));
-    console.log('Course added:', response.data);
 };
 
 export const editCourse = (id: number, course: Course) => async (dispatch: any) => {
@@ -55,10 +55,5 @@ export const deleteCourse = (id: number) => async (dispatch: any) => {
     dispatch(removeCourse(id));
 };
 
-const courseStore = configureStore({
-    reducer: {
-        courses: courseSlice.reducer,
-    },
-});
-
-export default courseStore;
+// ייצוא של ה-reducer בלבד
+export default courseSlice.reducer;
