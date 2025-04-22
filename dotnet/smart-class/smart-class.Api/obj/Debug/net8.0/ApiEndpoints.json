@@ -355,7 +355,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "smart_class.Core.Entities.File",
+        "Type": "smart_class.Core.DTOs.FileDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
