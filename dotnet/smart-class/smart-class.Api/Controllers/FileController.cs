@@ -74,7 +74,6 @@
 using Amazon.S3;
 using Amazon.S3.Transfer;
 using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using smart_class.Api.Entities;
 using smart_class.Core.DTOs;
@@ -107,14 +106,14 @@ namespace smart_class.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<FileDto>>> Get()
         {
-            IEnumerable<File> files = await _fileService.GetFilesAsync();
+            var files = await _fileService.GetFilesAsync();
             return Ok(_mapper.Map<IEnumerable<FileDto>>(files));
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<FileDto>> Get(int id)
         {
-            File? file = await _fileService.GetFileByIdAsync(id);
+            var file = await _fileService.GetFileByIdAsync(id);
             if (file == null)
                 return NotFound();
             return Ok(_mapper.Map<FileDto>(file));
@@ -124,64 +123,97 @@ namespace smart_class.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<FileDto>> Post([FromBody] FilePostPut filePost)
         {
-            // בדוק אם המידע שנשלח הוא null או אם נתיב הקובץ ריק
-            if (filePost == null || string.IsNullOrEmpty(filePost.FilePath))
+            if (filePost == null || string.IsNullOrEmpty(filePost.Path))
                 return BadRequest("FilePath cannot be null or empty.");
 
-            var filePath = filePost.FilePath; // הנחה שהנתיב לקובץ נמסר בבקשה
-
-            // בדוק אם הקובץ קיים לפני ההעלאה
-            if (!System.IO.File.Exists(filePath))
-            {
+            if (!System.IO.File.Exists(filePost.Path))
                 return NotFound("The specified file does not exist.");
-            }
-
-            // Upload to S3
-            var fileTransferUtility = new TransferUtility(_s3Client);
 
             try
             {
-                await fileTransferUtility.UploadAsync(filePath, _bucketName);
+                var transferUtility = new TransferUtility(_s3Client);
+                await transferUtility.UploadAsync(filePost.Path, _bucketName);
+
+                var fileUrl = $"https://{_bucketName}.s3.amazonaws.com/{Path.GetFileName(filePost.Path)}";
+
+                var addedFile = await _fileService.AddFileAsync(new File
+                {
+                    Path = fileUrl,
+                    UploadedAt = DateTime.Now
+                });
+
+                return CreatedAtAction(nameof(Get), new { id = addedFile.Id }, _mapper.Map<FileDto>(addedFile));
             }
             catch (AmazonS3Exception ex)
             {
-                return StatusCode((int)ex.StatusCode, $"Error uploading file: {ex.Message}");
+                return StatusCode((int)ex.StatusCode, $"S3 error: {ex.Message}");
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
-
-            var fileUrl = $"https://{_bucketName}.s3.amazonaws.com/{Path.GetFileName(filePath)}";
-
-            // שמור את המידע בבסיס הנתונים
-            File addedFile = await _fileService.AddFileAsync(new File { FilePath = fileUrl, UploadedAt = DateTime.Now });
-
-            // Return the file URL in the response
-            //var fileDto = new FileDto { FilePath = fileUrl };
-            return CreatedAtAction(nameof(Get), new { id = addedFile.Id }, addedFile); // עדכן את ה-ID לפי הצורך
         }
 
         //[Authorize(Roles = "Teacher")]
         [HttpPut("{id}")]
-        public async Task<ActionResult<File>> Put(int id, [FromBody] FilePostPut filePut)
+        public async Task<ActionResult<FileDto>> Put(int id, [FromBody] FilePostPut filePut)
         {
-            if (filePut == null)
-                return BadRequest("File cannot be null.");
-            File? updatedFile = await _fileService.UpdateFileAsync(id, new File { FilePath = filePut.FilePath });
-            if (updatedFile == null)
+            if (filePut == null || string.IsNullOrEmpty(filePut.Path))
+                return BadRequest("FilePath cannot be null or empty.");
+
+            var existingFile = await _fileService.GetFileByIdAsync(id);
+            if (existingFile == null)
                 return NotFound();
-            return Ok(updatedFile);
+
+            try
+            {
+                // Delete old file from S3
+                var oldKey = Path.GetFileName(existingFile.Path);
+                await _s3Client.DeleteObjectAsync(_bucketName, oldKey);
+
+                // Upload new file
+                var transferUtility = new TransferUtility(_s3Client);
+                await transferUtility.UploadAsync(filePut.Path, _bucketName);
+                var newUrl = $"https://{_bucketName}.s3.amazonaws.com/{Path.GetFileName(filePut.Path)}";
+
+                // Update DB
+                var updatedFile = await _fileService.UpdateFileAsync(id, new File { Path = newUrl });
+                return Ok(_mapper.Map<FileDto>(updatedFile));
+            }
+            catch (AmazonS3Exception ex)
+            {
+                return StatusCode((int)ex.StatusCode, $"S3 error: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
         //[Authorize(Roles = "Teacher")]
         [HttpDelete("{id}")]
-        public async Task<ActionResult<File>> Delete(int id)
+        public async Task<ActionResult<FileDto>> Delete(int id)
         {
-            File? deletedFile = await _fileService.DeleteAsync(id);
-            if (deletedFile == null)
+            var file = await _fileService.GetFileByIdAsync(id);
+            if (file == null)
                 return NotFound();
-            return Ok(deletedFile);
+
+            try
+            {
+                var key = Path.GetFileName(file.Path);
+                await _s3Client.DeleteObjectAsync(_bucketName, key);
+
+                var deletedFile = await _fileService.DeleteAsync(id);
+                return Ok(_mapper.Map<FileDto>(deletedFile));
+            }
+            catch (AmazonS3Exception ex)
+            {
+                return StatusCode((int)ex.StatusCode, $"S3 error: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
     }
 }

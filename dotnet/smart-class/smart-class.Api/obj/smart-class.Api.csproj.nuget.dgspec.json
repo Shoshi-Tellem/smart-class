@@ -73,6 +73,14 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Betalgo.OpenAI": {
+              "target": "Package",
+              "version": "[8.7.2, )"
+            },
+            "BouncyCastle": {
+              "target": "Package",
+              "version": "[1.8.9, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.14, )"
@@ -83,9 +91,21 @@
               "target": "Package",
               "version": "[8.0.14, )"
             },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.2.0-beta.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "itext7.bouncy-castle-adapter": {
+              "target": "Package",
+              "version": "[8.0.5, )"
             }
           },
           "imports": [

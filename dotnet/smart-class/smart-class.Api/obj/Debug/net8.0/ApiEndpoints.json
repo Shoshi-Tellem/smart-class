@@ -412,7 +412,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "smart_class.Core.Entities.File",
+        "Type": "smart_class.Core.DTOs.FileDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -438,7 +438,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "smart_class.Core.Entities.File",
+        "Type": "smart_class.Core.DTOs.FileDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -890,6 +890,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "smart_class.Api.Controllers.SheetController",
+    "Method": "GenerateCustomContent",
+    "RelativePath": "api/Sheet/GenerateCustomContent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "topic",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "smart_class.Api.Controllers.TeacherController",

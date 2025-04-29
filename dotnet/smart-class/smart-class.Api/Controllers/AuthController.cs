@@ -67,6 +67,6 @@ public class AuthController(IConfiguration configuration, DataContext context) :
         );
 
         var tokenString = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
-        return Ok(new { Token = tokenString });
+        return Ok(new { Token = tokenString, role, user.PasswordChanged });
     }
 }

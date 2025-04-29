@@ -101,7 +101,10 @@ namespace smart_class.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("FilePath")
+                    b.Property<int>("LessonId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Path")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -182,9 +185,6 @@ namespace smart_class.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("FileId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -198,8 +198,6 @@ namespace smart_class.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId");
-
-                    b.HasIndex("FileId");
 
                     b.ToTable("Lesson");
                 });
@@ -328,10 +326,6 @@ namespace smart_class.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("smart_class.Core.Entities.File", null)
-                        .WithMany("Lessons")
-                        .HasForeignKey("FileId");
-
                     b.Navigation("Course");
                 });
 
@@ -366,11 +360,6 @@ namespace smart_class.Data.Migrations
                 });
 
             modelBuilder.Entity("smart_class.Core.Entities.Course", b =>
-                {
-                    b.Navigation("Lessons");
-                });
-
-            modelBuilder.Entity("smart_class.Core.Entities.File", b =>
                 {
                     b.Navigation("Lessons");
                 });

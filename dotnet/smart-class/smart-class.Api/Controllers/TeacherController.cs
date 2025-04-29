@@ -136,6 +136,7 @@ namespace smart_class.Api.Controllers
             Teacher? updatedTeacher = await _teacherService.UpdateTeacherAsync(id, new Teacher
             {
                 Password = password,
+                PasswordChanged = true,
                 UpdatedAt = DateTime.Now
             });
             return Ok(updatedTeacher);

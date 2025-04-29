@@ -39,7 +39,7 @@ namespace smart_class.Service
             if (existingFile == null)
                 return null;
 
-            existingFile.FilePath = file.FilePath; // Assuming File has a Name property
+            existingFile.Path = file.Path; // Assuming File has a Name property
             File updatedFile = await _fileRepository.UpdateAsync(existingFile);
             await _repositoryManager.SaveAsync();
             return updatedFile;
