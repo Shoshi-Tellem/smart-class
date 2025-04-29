@@ -120,7 +120,7 @@ namespace smart_class.Api.Controllers
 
         //[Authorize(Roles = "Teacher")]
         [HttpPut("me")]
-        public async Task<ActionResult<Teacher>> PutMe([FromBody] string password)
+        public async Task<ActionResult<Teacher>> PutMe([FromBody] ChangePasswordDto changePassword)
         {
             var userId = User.FindFirst("Id")?.Value;
             if (string.IsNullOrEmpty(userId))
@@ -129,16 +129,14 @@ namespace smart_class.Api.Controllers
             if (!int.TryParse(userId, out int id))
                 return BadRequest("User ID is not a valid integer.");
 
+            if (string.IsNullOrWhiteSpace(changePassword.Password))
+                return BadRequest("Password cannot be null or empty.");
+
             Teacher? teacher = await _teacherService.GetTeacherByIdAsync(id);
             if (teacher == null)
                 return NotFound();
 
-            Teacher? updatedTeacher = await _teacherService.UpdateTeacherAsync(id, new Teacher
-            {
-                Password = password,
-                PasswordChanged = true,
-                UpdatedAt = DateTime.Now
-            });
+            Teacher? updatedTeacher = await _teacherService.UpdateTeacherPasswordAsync(id, changePassword.Password);
             return Ok(updatedTeacher);
         }
 

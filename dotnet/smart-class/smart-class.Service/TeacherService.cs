@@ -30,6 +30,19 @@ namespace smart_class.Service
                 return null;
             existingTeacher.Name = teacher.Name;
             existingTeacher.Email = teacher.Email;
+            existingTeacher.UpdatedAt = DateTime.Now;
+            Teacher updatedTeacher = await _teacherRepository.UpdateAsync(existingTeacher);
+            await _repositoryManager.SaveAsync();
+            return updatedTeacher;
+        }
+        public async Task<Teacher> UpdateTeacherPasswordAsync(int id, string password)
+        {
+            Teacher? existingTeacher = await GetTeacherByIdAsync(id);
+            if (existingTeacher == null)
+                return null;
+            existingTeacher.Password = password;
+            existingTeacher.PasswordChanged = true;
+            existingTeacher.UpdatedAt = DateTime.Now;
             Teacher updatedTeacher = await _teacherRepository.UpdateAsync(existingTeacher);
             await _repositoryManager.SaveAsync();
             return updatedTeacher;

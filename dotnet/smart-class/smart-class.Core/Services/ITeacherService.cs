@@ -10,6 +10,7 @@ namespace smart_class.Core.Services
         Task<Teacher?> GetTeacherByIdAsync(int id);
         Task<Teacher> AddTeacherAsync(Teacher teacher);
         Task<Teacher?> UpdateTeacherAsync(int id, Teacher teacher);
+        Task<Teacher> UpdateTeacherPasswordAsync(int id, string password);
         Task<Teacher?> DeleteAsync(int id);
     }
 }

@@ -1065,8 +1065,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "password",
-        "Type": "System.String",
+        "Name": "changePassword",
+        "Type": "smart_class.Core.DTOs.ChangePasswordDto",
         "IsRequired": true
       }
     ],
